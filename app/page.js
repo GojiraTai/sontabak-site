@@ -14,7 +14,6 @@ export default function HomePage() {
               Hem bütçeni koru hem de gıda israfını önle!
             </p>
 
-            {/* value props kısa vurucu */}
             <ul className="mt-6 space-y-2 text-gray-700">
               <li>✅ <b>Kalite</b>: Aynı ürün, aynı tazelik — sadece daha uygun fiyat.</li>
               <li>✅ <b>Fırsat</b>: %50’ye varan indirimlerle “son tabak” paketleri.</li>
@@ -100,7 +99,7 @@ export default function HomePage() {
         <div className="grid md:grid-cols-3 gap-6 mt-6">
           {[
             { icon: "📍", title: "Keşfet", desc: "Haritadan ya da listeden işletmeni seç." },
-            { icon: "🛒", title: "Rezerve Et", desc: "Son tabak paketini ayırt, online öde (yakında)." },
+            { icon: "🛒", title: "Rezerve Et", desc: "Son tabak paketini ayırt. (Yakında hizmetinizde)" },
             { icon: "🍴", title: "Teslim Al", desc: "Belirtilen saat aralığında işletmeden teslim et." },
           ].map((s) => (
             <div key={s.title} className="rounded-2xl border p-6 bg-white shadow-sm">
@@ -128,7 +127,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* IMPACT / TOPLUMSAL MESAJ */}
+      {/* IMPACT / TOPLUMSAL MESAJ (0 değerler) */}
       <section className="mx-auto max-w-6xl px-4 pb-20">
         <div className="rounded-3xl border p-8 bg-white shadow-sm">
           <h3 className="text-2xl md:text-3xl font-bold">Birlikte Daha İyi Bir Sofra</h3>
@@ -138,17 +137,20 @@ export default function HomePage() {
           </p>
           <div className="grid md:grid-cols-3 gap-6 mt-8">
             <div className="rounded-2xl border p-6 text-center">
-              <div className="text-3xl font-black text-brand-accent">5.234</div>
-              <div className="mt-1 text-sm text-gray-600">kurtarılan tabak (örnek)</div>
+              <div className="text-3xl font-black text-brand-accent">0</div>
+              <div className="mt-1 text-sm text-gray-600">kurtarılan tabak</div>
             </div>
             <div className="rounded-2xl border p-6 text-center">
-              <div className="text-3xl font-black text-brand-accent">1.2 ton</div>
-              <div className="mt-1 text-sm text-gray-600">israf edilmeyen yemek (örnek)</div>
+              <div className="text-3xl font-black text-brand-accent">0 kg</div>
+              <div className="mt-1 text-sm text-gray-600">israf edilmeyen yemek</div>
             </div>
             <div className="rounded-2xl border p-6 text-center">
-              <div className="text-3xl font-black text-brand-accent">%50+</div>
+              <div className="text-3xl font-black text-brand-accent">0%</div>
               <div className="mt-1 text-sm text-gray-600">ortalama indirim</div>
             </div>
+          </div>
+          <div className="mt-4 text-xs text-gray-500">
+            *Rakamlar yakında canlı verilerle güncellenecek.
           </div>
         </div>
       </section>
