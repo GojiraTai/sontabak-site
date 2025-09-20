@@ -1,47 +1,37 @@
 // app/page.js
 export default function HomePage() {
+  const faqs = [
+    { q: "Nasıl ucuza alıyorum, kalite aynı mı?", a: "Evet. Ürünler aynı günün taze ürünleridir; sadece kapanış saatine yakın oldukları için indirimlidir." },
+    { q: "Paket içeriği nasıl oluyor?", a: "Sürpriz paket mantığı var: kategoriye uygun, satılmamış son ürünlerden karışık gelir." },
+    { q: "Bugün alıp yarın yiyebilir miyim?", a: "Evet. Uygun saklama koşullarında dolapta muhafaza ederek ertesi gün tüketebilirsin." },
+    { q: "Ödeme ve teslimat nasıl?", a: "Şimdilik rezervasyon yaklaşımıyla ilerliyoruz (Yakında hizmetinizde). Belirtilen saat aralığında işletmeden teslim alırsın." },
+    { q: "İade olur mu?", a: "Sürpriz içeriğe rağmen kaliteyle ilgili sorun varsa işletme telafisi/iadesi uygulanır." },
+  ];
+
   return (
     <div className="relative isolate">
-      {/* ÜST BANNER (AKAN METİN) */}
+      {/* ÜST BANNER (AKAN, KALIN FONT) */}
       <div className="mx-auto max-w-6xl px-4 pt-6">
         <div className="rounded-2xl border bg-gradient-to-r from-brand-primary/10 via-orange-100 to-brand-accent/10 p-3">
           <div className="marquee">
             <div className="marquee__inner">
-              <span
-                style={{ fontFamily: "'Bebas Neue', system-ui, sans-serif" }}
-                className="mx-8 text-2xl md:text-3xl tracking-wider text-brand-accent"
-              >
+              <span className="banner-text mx-8 text-2xl md:text-3xl text-brand-accent">
                 KALİTELİ ÜRÜN, UYGUN FİYAT — SON TABAK’LA FIRSATI KAP!
               </span>
-              <span
-                style={{ fontFamily: "'Bebas Neue', system-ui, sans-serif" }}
-                className="mx-8 text-2xl md:text-3xl tracking-wider text-brand-primary"
-              >
+              <span className="banner-text mx-8 text-2xl md:text-3xl text-brand-primary">
                 YARININ YEMEĞİNİ BUGÜNDEN AL; DOLABA KOY, İSRAFI AZALT!
               </span>
-              <span
-                style={{ fontFamily: "'Bebas Neue', system-ui, sans-serif" }}
-                className="mx-8 text-2xl md:text-3xl tracking-wider text-gray-900"
-              >
+              <span className="banner-text mx-8 text-2xl md:text-3xl text-gray-900">
                 MAHALLENDEKİ İŞLETMELERE DESTEK OL — LEZZETİ KAÇIRMADAN!
               </span>
-              {/* tekrar eden aynı cümleler akışın kesilmemesi için */}
-              <span
-                style={{ fontFamily: "'Bebas Neue', system-ui, sans-serif" }}
-                className="mx-8 text-2xl md:text-3xl tracking-wider text-brand-accent"
-              >
+              {/* akış kesilmesin diye tekrar */}
+              <span className="banner-text mx-8 text-2xl md:text-3xl text-brand-accent">
                 KALİTELİ ÜRÜN, UYGUN FİYAT — SON TABAK’LA FIRSATI KAP!
               </span>
-              <span
-                style={{ fontFamily: "'Bebas Neue', system-ui, sans-serif" }}
-                className="mx-8 text-2xl md:text-3xl tracking-wider text-brand-primary"
-              >
+              <span className="banner-text mx-8 text-2xl md:text-3xl text-brand-primary">
                 YARININ YEMEĞİNİ BUGÜNDEN AL; DOLABA KOY, İSRAFI AZALT!
               </span>
-              <span
-                style={{ fontFamily: "'Bebas Neue', system-ui, sans-serif" }}
-                className="mx-8 text-2xl md:text-3xl tracking-wider text-gray-900"
-              >
+              <span className="banner-text mx-8 text-2xl md:text-3xl text-gray-900">
                 MAHALLENDEKİ İŞLETMELERE DESTEK OL — LEZZETİ KAÇIRMADAN!
               </span>
             </div>
@@ -154,6 +144,22 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* SSS – ANA SAYFADA */}
+      <section id="sss" className="mx-auto max-w-6xl px-4 py-12">
+        <h2 className="text-2xl md:text-3xl font-bold">Sık Sorulan Sorular</h2>
+        <div className="mt-6 divide-y border rounded-2xl bg-white shadow-sm">
+          {faqs.map((f, idx) => (
+            <details key={idx} className="group p-5">
+              <summary className="flex cursor-pointer list-none items-center justify-between">
+                <span className="text-base md:text-lg font-semibold">{f.q}</span>
+                <span className="ml-4 select-none text-xl leading-none group-open:rotate-45 transition">+</span>
+              </summary>
+              <p className="mt-3 text-gray-700">{f.a}</p>
+            </details>
+          ))}
+        </div>
+      </section>
+
       {/* İŞLETMELER İÇİN CTA */}
       <section className="mx-auto max-w-6xl px-4 pb-12">
         <div className="rounded-3xl border bg-gradient-to-r from-white to-gray-50 p-8 md:p-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
@@ -192,9 +198,7 @@ export default function HomePage() {
               <div className="mt-1 text-sm text-gray-600">ortalama indirim</div>
             </div>
           </div>
-          <div className="mt-4 text-xs text-gray-500">
-            *Rakamlar yakında canlı verilerle güncellenecek.
-          </div>
+          <div className="mt-4 text-xs text-gray-500">*Rakamlar yakında canlı verilerle güncellenecek.</div>
         </div>
       </section>
     </div>
