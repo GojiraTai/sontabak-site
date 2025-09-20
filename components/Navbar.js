@@ -12,6 +12,7 @@ export default function Navbar() {
           <Link href="/how" className="hover:text-brand-accent">Nasıl Çalışır?</Link>
           <Link href="/business" className="hover:text-brand-accent">İşletmeler</Link>
           <Link href="/about" className="hover:text-brand-accent">Hakkımızda</Link>
+          <Link href="/#sss" className="hover:text-brand-accent">SSS</Link>
         </nav>
       </div>
     </header>
