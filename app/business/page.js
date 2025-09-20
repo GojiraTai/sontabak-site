@@ -2,38 +2,14 @@
 export const metadata = { title: "İşletmeler İçin • Son Tabak" };
 
 const faqs = [
-  {
-    q: "Komisyon oranı nedir?",
-    a: "MVP döneminde esnek model uyguluyoruz. Önerilen komisyon %10–15 aralığında. Pilot işletmelere lansman avantajı sunuyoruz."
-  },
-  {
-    q: "Saat aralığı nasıl çalışır?",
-    a: "İşletme kapanmadan 1–2 saat önce paketler listelenir. Teslim alınabilir zaman aralığını siz belirlersiniz (örn. 19:30–21:00)."
-  },
-  {
-    q: "İptal/iade politikası nasıl?",
-    a: "Paketler sürpriz içeriklidir. Yanlış/bozuk ürün gibi istisnai durumlarda işletme inisiyatifiyle telafi/iade yapılır. Şeffaf kuralları sözleşmede belirtiyoruz."
-  },
-  {
-    q: "Kalite ve gıda güvenliği?",
-    a: "Son Tabak, taze ve güvenli ürünlerin değerlendirilmesini hedefler. Soğuk zincire uygun saklama/teslim prensiplerini rehberde paylaşıyoruz."
-  },
-  {
-    q: "Fatura/e-fatura süreci?",
-    a: "Her satış için işletme adına fatura kesilmelidir. E-fatura/mali entegrasyon için çözüm ortaklarımızı sunacağız."
-  },
-  {
-    q: "Ödeme akışı nasıl oluyor?",
-    a: "Ödemeler online altyapı ile tahsil edilecek (Yakında hizmetinizde). Gelirleriniz kesinti sonrası belirli periyotlarla aktarılır."
-  },
-  {
-    q: "Destek nasıl alırım?",
-    a: "Öncelikli destek kanalımız e-posta ve WhatsApp iş destek hattıdır. Eğitim dokümanları ve kısa videolar sağlıyoruz."
-  },
-  {
-    q: "Fotoğraf ve içerik önerileri?",
-    a: "Doğal ışık, sade arka plan, paket fotoğrafı ve yaklaşık gramaj/servis kişi sayısı dönüşümü artırır."
-  },
+  { q: "Komisyon oranı nedir?", a: "MVP döneminde esnek model uyguluyoruz. Önerilen komisyon %10–15 aralığında. Pilot işletmelere lansman avantajı sunuyoruz." },
+  { q: "Saat aralığı nasıl çalışır?", a: "İşletme kapanmadan 1–2 saat önce paketler listelenir. Teslim alınabilir zaman aralığını siz belirlersiniz (örn. 19:30–21:00)." },
+  { q: "İptal/iade politikası nasıl?", a: "Paketler sürpriz içeriklidir. Yanlış/bozuk ürün gibi istisnai durumlarda işletme inisiyatifiyle telafi/iade yapılır. Kuralları sözleşmede belirtiyoruz." },
+  { q: "Kalite ve gıda güvenliği?", a: "Taze ve güvenli ürünlerin değerlendirilmesi esastır. Soğuk zincire uygun saklama/teslim prensiplerini rehberde paylaşıyoruz." },
+  { q: "Fatura/e-fatura süreci?", a: "Her satış için işletme adına fatura kesilmelidir. E-fatura/mali entegrasyon için çözüm ortaklarımızı sunacağız." },
+  { q: "Ödeme akışı nasıl oluyor?", a: "Ödemeler online altyapı ile tahsil edilecek (Yakında hizmetinizde). Gelirler kesinti sonrası periyodik aktarılır." },
+  { q: "Destek nasıl alırım?", a: "Öncelikli destek kanalımız e-posta ve WhatsApp iş destek hattıdır. Eğitim dokümanları ve kısa videolar sağlıyoruz." },
+  { q: "Fotoğraf ve içerik önerileri?", a: "Doğal ışık, sade arka plan, paket fotoğrafı ve yaklaşık gramaj/servis kişi sayısı dönüşümü artırır." },
 ];
 
 export default function BusinessPage() {
@@ -45,7 +21,7 @@ export default function BusinessPage() {
         Son Tabak ile yeni müşterilere ulaşın, israfı azaltın.
       </p>
 
-      {/* başvuru formu (MVP) */}
+      {/* Başvuru formu (MVP) */}
       <div className="mt-10 rounded-2xl border p-6 bg-white shadow-sm">
         <form className="grid md:grid-cols-2 gap-4">
           <div>
