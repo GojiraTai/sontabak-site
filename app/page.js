@@ -1,5 +1,24 @@
 // app/page.js
 export default function HomePage() {
+  const faqs = [
+    {
+      q: "Son Tabak nasıl çalışıyor?",
+      a: "Restoranlar ve kafeler kapanmadan önce ellerinde kalan ürünleri sisteme girer. Sen de site veya uygulama üzerinden uygun fiyata sipariş verirsin. Belirtilen saat aralığında işletmeden teslim alırsın."
+    },
+    {
+      q: "Hangi ürünleri alıyorum?",
+      a: "İşletmeler menüden seçili ürünleri net olarak listeler. Böylece ne alacağını bilerek sipariş verirsin. Belirsiz “sürpriz paket” uygulaması yoktur."
+    },
+    {
+      q: "Ödemeyi nasıl yapacağım?",
+      a: "Şimdilik ödeme işletmede yapılır. Online ödeme özelliği yakında hizmetinizde olacak."
+    },
+    {
+      q: "İptal edebilir miyim?",
+      a: "Siparişler belirli bir saatten önce iptal edilebilir. Böylece hem işletmenin hem de senin mağdur olmaman önlenir."
+    },
+  ];
+
   return (
     <div className="relative isolate">
       {/* ÜST BANNER */}
@@ -135,43 +154,19 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* SSS */}
+      {/* SSS – AÇILIR/KAPANIR */}
       <section id="sss" className="mx-auto max-w-4xl px-4 py-12">
         <h2 className="text-2xl md:text-3xl font-bold text-center mb-8">Sık Sorulan Sorular</h2>
-        <div className="space-y-6">
-
-          <div>
-            <h3 className="font-semibold text-lg">❓ Son Tabak nasıl çalışıyor?</h3>
-            <p className="text-gray-600 mt-2">
-              Restoranlar ve kafeler kapanmadan önce ellerinde kalan ürünleri sisteme girer. 
-              Sen de site veya uygulama üzerinden uygun fiyata sipariş verirsin. 
-              Belirtilen saat aralığında işletmeden teslim alırsın.
-            </p>
-          </div>
-
-          <div>
-            <h3 className="font-semibold text-lg">❓ Hangi ürünleri alıyorum?</h3>
-            <p className="text-gray-600 mt-2">
-              İşletmeler menüden seçili ürünleri <b>net olarak listeler</b>. 
-              Böylece ne alacağını bilerek sipariş verirsin. Belirsiz “sürpriz paket” uygulaması yoktur.
-            </p>
-          </div>
-
-          <div>
-            <h3 className="font-semibold text-lg">❓ Ödemeyi nasıl yapacağım?</h3>
-            <p className="text-gray-600 mt-2">
-              Şimdilik ödeme işletmede yapılır. Online ödeme özelliği <b>yakında hizmetinizde</b> olacak.
-            </p>
-          </div>
-
-          <div>
-            <h3 className="font-semibold text-lg">❓ İptal edebilir miyim?</h3>
-            <p className="text-gray-600 mt-2">
-              Siparişler belirli bir saatten önce iptal edilebilir. 
-              Böylece hem işletmenin hem de senin mağdur olmaman garanti altına alınır.
-            </p>
-          </div>
-
+        <div className="divide-y border rounded-2xl bg-white shadow-sm">
+          {faqs.map((f, idx) => (
+            <details key={idx} className="group p-5">
+              <summary className="flex cursor-pointer list-none items-center justify-between">
+                <span className="text-base md:text-lg font-semibold">{f.q}</span>
+                <span className="ml-4 select-none text-xl leading-none transition group-open:rotate-45">+</span>
+              </summary>
+              <p className="mt-3 text-gray-700">{f.a}</p>
+            </details>
+          ))}
         </div>
       </section>
 
