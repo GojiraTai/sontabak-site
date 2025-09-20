@@ -2,8 +2,55 @@
 export default function HomePage() {
   return (
     <div className="relative isolate">
+      {/* ÜST BANNER (AKAN METİN) */}
+      <div className="mx-auto max-w-6xl px-4 pt-6">
+        <div className="rounded-2xl border bg-gradient-to-r from-brand-primary/10 via-orange-100 to-brand-accent/10 p-3">
+          <div className="marquee">
+            <div className="marquee__inner">
+              <span
+                style={{ fontFamily: "'Bebas Neue', system-ui, sans-serif" }}
+                className="mx-8 text-2xl md:text-3xl tracking-wider text-brand-accent"
+              >
+                KALİTELİ ÜRÜN, UYGUN FİYAT — SON TABAK’LA FIRSATI KAP!
+              </span>
+              <span
+                style={{ fontFamily: "'Bebas Neue', system-ui, sans-serif" }}
+                className="mx-8 text-2xl md:text-3xl tracking-wider text-brand-primary"
+              >
+                YARININ YEMEĞİNİ BUGÜNDEN AL; DOLABA KOY, İSRAFI AZALT!
+              </span>
+              <span
+                style={{ fontFamily: "'Bebas Neue', system-ui, sans-serif" }}
+                className="mx-8 text-2xl md:text-3xl tracking-wider text-gray-900"
+              >
+                MAHALLENDEKİ İŞLETMELERE DESTEK OL — LEZZETİ KAÇIRMADAN!
+              </span>
+              {/* tekrar eden aynı cümleler akışın kesilmemesi için */}
+              <span
+                style={{ fontFamily: "'Bebas Neue', system-ui, sans-serif" }}
+                className="mx-8 text-2xl md:text-3xl tracking-wider text-brand-accent"
+              >
+                KALİTELİ ÜRÜN, UYGUN FİYAT — SON TABAK’LA FIRSATI KAP!
+              </span>
+              <span
+                style={{ fontFamily: "'Bebas Neue', system-ui, sans-serif" }}
+                className="mx-8 text-2xl md:text-3xl tracking-wider text-brand-primary"
+              >
+                YARININ YEMEĞİNİ BUGÜNDEN AL; DOLABA KOY, İSRAFI AZALT!
+              </span>
+              <span
+                style={{ fontFamily: "'Bebas Neue', system-ui, sans-serif" }}
+                className="mx-8 text-2xl md:text-3xl tracking-wider text-gray-900"
+              >
+                MAHALLENDEKİ İŞLETMELERE DESTEK OL — LEZZETİ KAÇIRMADAN!
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* HERO */}
-      <section className="mx-auto max-w-6xl px-4 py-16">
+      <section className="mx-auto max-w-6xl px-4 py-12">
         <div className="grid md:grid-cols-2 gap-10 items-center">
           <div>
             <h1 className="text-4xl md:text-5xl font-extrabold leading-tight">
@@ -28,13 +75,9 @@ export default function HomePage() {
                 İşletmeni Kat
               </a>
             </div>
-
-            <div className="mt-6 text-sm text-gray-600">
-              Sloganlar: “İsraf Etme, Tadını Çıkar!” • “Son Tabak Senin Olsun.” • “Yemeğini Kurtar, Dünyayı Kurtar.”
-            </div>
           </div>
 
-          {/* görsel mock kart */}
+          {/* sağ mock kart */}
           <div className="relative p-8 rounded-3xl border bg-gradient-to-br from-white to-gray-50 shadow-sm">
             <div className="rounded-2xl border p-6">
               <div className="text-sm uppercase tracking-widest text-gray-500">Yakındakiler</div>
