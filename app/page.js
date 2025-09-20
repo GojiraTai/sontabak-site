@@ -1,16 +1,8 @@
 // app/page.js
 export default function HomePage() {
-  const faqs = [
-    { q: "Nasıl ucuza alıyorum, kalite aynı mı?", a: "Evet. Ürünler aynı günün taze ürünleridir; sadece kapanış saatine yakın oldukları için indirimlidir." },
-    { q: "Paket içeriği nasıl oluyor?", a: "Sürpriz paket mantığı var: kategoriye uygun, satılmamış son ürünlerden karışık gelir." },
-    { q: "Bugün alıp yarın yiyebilir miyim?", a: "Evet. Uygun saklama koşullarında dolapta muhafaza ederek ertesi gün tüketebilirsin." },
-    { q: "Ödeme ve teslimat nasıl?", a: "Şimdilik rezervasyon yaklaşımıyla ilerliyoruz (Yakında hizmetinizde). Belirtilen saat aralığında işletmeden teslim alırsın." },
-    { q: "İade olur mu?", a: "Sürpriz içeriğe rağmen kaliteyle ilgili sorun varsa işletme telafisi/iadesi uygulanır." },
-  ];
-
   return (
     <div className="relative isolate">
-      {/* ÜST BANNER (AKAN, KALIN FONT) */}
+      {/* ÜST BANNER */}
       <div className="mx-auto max-w-6xl px-4 pt-6">
         <div className="rounded-2xl border bg-gradient-to-r from-brand-primary/10 via-orange-100 to-brand-accent/10 p-3">
           <div className="marquee">
@@ -24,7 +16,6 @@ export default function HomePage() {
               <span className="banner-text mx-8 text-2xl md:text-3xl text-gray-900">
                 MAHALLENDEKİ İŞLETMELERE DESTEK OL — LEZZETİ KAÇIRMADAN!
               </span>
-              {/* akış kesilmesin diye tekrar */}
               <span className="banner-text mx-8 text-2xl md:text-3xl text-brand-accent">
                 KALİTELİ ÜRÜN, UYGUN FİYAT — SON TABAK’LA FIRSATI KAP!
               </span>
@@ -74,14 +65,14 @@ export default function HomePage() {
               <div className="mt-2 text-2xl font-semibold">Son Tabak Paketleri</div>
               <ul className="mt-4 space-y-3">
                 {[
-                  { name: "Mahalle Fırını", desc: "Sürpriz Börek & Poğaça", old: 70, now: 29 },
-                  { name: "Köşe Kafe", desc: "Tatlı Sürprizi", old: 120, now: 49 },
+                  { name: "Mahalle Fırını", desc: "Börek & Poğaça", old: 70, now: 29 },
+                  { name: "Köşe Kafe", desc: "Tatlı Çeşidi", old: 120, now: 49 },
                   { name: "Pideci Usta", desc: "Günün Son Dilimleri", old: 150, now: 59 },
                 ].map((i) => (
                   <li key={i.name} className="flex items-center justify-between">
                     <div>
                       <div className="font-medium">{i.name}</div>
-                      <div className="text-sm text-gray-600">“{i.desc}”</div>
+                      <div className="text-sm text-gray-600">{i.desc}</div>
                     </div>
                     <div className="text-right">
                       <div className="line-through text-sm text-gray-400">₺{i.old}</div>
@@ -91,14 +82,14 @@ export default function HomePage() {
                 ))}
               </ul>
               <div className="mt-4 text-xs text-gray-500">
-                *Görseller temsili. Paket içerikleri sürprizdir; kalite aynıdır, fiyatı uygundur.
+                *Görseller temsili. Paket içerikleri işletme tarafından net şekilde listelenir.
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* NEDEN SON TABAK? */}
+      {/* NEDEN SON TABAK */}
       <section className="mx-auto max-w-6xl px-4 pb-8">
         <h2 className="text-2xl md:text-3xl font-bold">Neden Son Tabak?</h2>
         <div className="mt-6 grid md:grid-cols-3 gap-6">
@@ -132,7 +123,7 @@ export default function HomePage() {
         <div className="grid md:grid-cols-3 gap-6 mt-6">
           {[
             { icon: "📍", title: "Keşfet", desc: "Haritadan ya da listeden işletmeni seç." },
-            { icon: "🛒", title: "Rezerve Et", desc: "Son tabak paketini ayırt. (Yakında hizmetinizde)" },
+            { icon: "🛒", title: "Sipariş Ver", desc: "Belirlenen ürünlerden uygun fiyatla seçimini yap. (Yakında online ödeme)" },
             { icon: "🍴", title: "Teslim Al", desc: "Belirtilen saat aralığında işletmeden teslim et." },
           ].map((s) => (
             <div key={s.title} className="rounded-2xl border p-6 bg-white shadow-sm">
@@ -144,19 +135,43 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* SSS – ANA SAYFADA */}
-      <section id="sss" className="mx-auto max-w-6xl px-4 py-12">
-        <h2 className="text-2xl md:text-3xl font-bold">Sık Sorulan Sorular</h2>
-        <div className="mt-6 divide-y border rounded-2xl bg-white shadow-sm">
-          {faqs.map((f, idx) => (
-            <details key={idx} className="group p-5">
-              <summary className="flex cursor-pointer list-none items-center justify-between">
-                <span className="text-base md:text-lg font-semibold">{f.q}</span>
-                <span className="ml-4 select-none text-xl leading-none group-open:rotate-45 transition">+</span>
-              </summary>
-              <p className="mt-3 text-gray-700">{f.a}</p>
-            </details>
-          ))}
+      {/* SSS */}
+      <section id="sss" className="mx-auto max-w-4xl px-4 py-12">
+        <h2 className="text-2xl md:text-3xl font-bold text-center mb-8">Sık Sorulan Sorular</h2>
+        <div className="space-y-6">
+
+          <div>
+            <h3 className="font-semibold text-lg">❓ Son Tabak nasıl çalışıyor?</h3>
+            <p className="text-gray-600 mt-2">
+              Restoranlar ve kafeler kapanmadan önce ellerinde kalan ürünleri sisteme girer. 
+              Sen de site veya uygulama üzerinden uygun fiyata sipariş verirsin. 
+              Belirtilen saat aralığında işletmeden teslim alırsın.
+            </p>
+          </div>
+
+          <div>
+            <h3 className="font-semibold text-lg">❓ Hangi ürünleri alıyorum?</h3>
+            <p className="text-gray-600 mt-2">
+              İşletmeler menüden seçili ürünleri <b>net olarak listeler</b>. 
+              Böylece ne alacağını bilerek sipariş verirsin. Belirsiz “sürpriz paket” uygulaması yoktur.
+            </p>
+          </div>
+
+          <div>
+            <h3 className="font-semibold text-lg">❓ Ödemeyi nasıl yapacağım?</h3>
+            <p className="text-gray-600 mt-2">
+              Şimdilik ödeme işletmede yapılır. Online ödeme özelliği <b>yakında hizmetinizde</b> olacak.
+            </p>
+          </div>
+
+          <div>
+            <h3 className="font-semibold text-lg">❓ İptal edebilir miyim?</h3>
+            <p className="text-gray-600 mt-2">
+              Siparişler belirli bir saatten önce iptal edilebilir. 
+              Böylece hem işletmenin hem de senin mağdur olmaman garanti altına alınır.
+            </p>
+          </div>
+
         </div>
       </section>
 
@@ -176,7 +191,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* IMPACT / TOPLUMSAL MESAJ (0 değerler) */}
+      {/* IMPACT */}
       <section className="mx-auto max-w-6xl px-4 pb-20">
         <div className="rounded-3xl border p-8 bg-white shadow-sm">
           <h3 className="text-2xl md:text-3xl font-bold">Birlikte Daha İyi Bir Sofra</h3>
