@@ -1,0 +1,32 @@
+"use client";
+import Link from "next/link";
+
+export default function GirisPage() {
+  return (
+    <section className="mx-auto max-w-md px-4 py-16 text-center">
+      <h1 className="text-3xl font-bold">Giriş Yap</h1>
+      <p className="mt-3 text-gray-600">
+        Devam etmek için giriş türünü seçin
+      </p>
+
+      <div className="mt-8 space-y-4">
+        <Link
+          href="/musteri"
+          className="block w-full rounded-xl px-6 py-4 bg-brand-accent text-white font-semibold hover:opacity-90 transition"
+        >
+          Müşteri Girişi
+        </Link>
+        <Link
+          href="/admin"
+          className="block w-full rounded-xl px-6 py-4 bg-brand-primary text-white font-semibold hover:opacity-90 transition"
+        >
+          Restoran Girişi
+        </Link>
+      </div>
+
+      <p className="mt-8 text-xs text-gray-500">
+        Henüz hesabınız yok mu? Yakında kayıt olma özelliği eklenecek.
+      </p>
+    </section>
+  );
+}
