@@ -11,24 +11,13 @@ export default function Navbar() {
           <span className="font-semibold">Son Tabak</span>
         </Link>
         <nav className="flex items-center gap-6 text-sm">
-          <Link href="/how" className="hover:text-brand-accent">
-            Nasıl Çalışır?
-          </Link>
-          <Link href="/business" className="hover:text-brand-accent">
-            İşletmeler
-          </Link>
-          <Link href="/about" className="hover:text-brand-accent">
-            Hakkımızda
-          </Link>
-          <Link href="/#sss" className="hover:text-brand-accent">
-            SSS
-          </Link>
-          {/* Yeni eklenenler */}
-          <Link href="/musteri" className="hover:text-brand-accent">
-            Müşteri
-          </Link>
-          <Link href="/admin" className="hover:text-brand-accent">
-            Admin
+          <Link href="/how" className="hover:text-brand-accent">Nasıl Çalışır?</Link>
+          <Link href="/business" className="hover:text-brand-accent">İşletmeler</Link>
+          <Link href="/about" className="hover:text-brand-accent">Hakkımızda</Link>
+          <Link href="/#sss" className="hover:text-brand-accent">SSS</Link>
+          {/* Yeni: Giriş */}
+          <Link href="/giris" className="rounded-lg px-4 py-2 bg-brand-primary text-white hover:opacity-90 transition">
+            Giriş Yap
           </Link>
         </nav>
       </div>
